@@ -1,0 +1,132 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: Raw Airbnb data imported from source systems
+    database: airbnb-485004
+    schema: raw_data
+    tables:
+      - name: hosts
+        columns:
+          - name: host_id
+            tests:
+              - unique:
+                  arguments: {}
+              - not_null:
+                  arguments: {}
+
+      - name: rooms
+        columns:
+          - name: room_id
+            tests:
+              - unique:
+                  arguments: {}
+              - not_null:
+                  arguments: {}
+          - name: host_id
+            tests:
+              - not_null:
+                  arguments: {}
+
+      - name: locations
+        columns:
+          - name: location_id
+            tests:
+              - unique:
+                  arguments: {}
+              - not_null:
+                  arguments: {}
+
+      - name: pricing
+        columns:
+          - name: pricing_id
+            tests:
+              - unique:
+                  arguments: {}
+              - not_null:
+                  arguments: {}
+          - name: room_id
+            tests:
+              - not_null:
+                  arguments: {}
+
+      - name: review_stats
+        columns:
+          - name: room_id
+            tests:
+              - unique:
+                  arguments: {}
+              - not_null:
+                  arguments: {}
+
+models:
+  - name: stg_hosts
+    columns:
+      - name: host_id
+        tests:
+          - unique:
+              arguments: {}
+          - not_null:
+              arguments: {}
+
+  - name: stg_rooms
+    columns:
+      - name: room_id
+        tests:
+          - unique:
+              arguments: {}
+          - not_null:
+              arguments: {}
+      - name: host_id
+        tests:
+          - not_null:
+              arguments: {}
+          - relationships:
+              arguments:
+                to: ref('stg_hosts')
+                field: host_id
+      - name: location_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_locations')
+                field: location_id
+
+  - name: stg_locations
+    columns:
+      - name: location_id
+        tests:
+          - unique:
+              arguments: {}
+          - not_null:
+              arguments: {}
+
+  - name: stg_pricing
+    columns:
+      - name: pricing_id
+        tests:
+          - unique:
+              arguments: {}
+          - not_null:
+              arguments: {}
+      - name: room_id
+        tests:
+          - not_null:
+              arguments: {}
+          - relationships:
+              arguments:
+                to: ref('stg_rooms')
+                field: room_id
+
+  - name: stg_review_stats
+    columns:
+      - name: room_id
+        tests:
+          - unique:
+              arguments: {}
+          - not_null:
+              arguments: {}
+          - relationships:
+              arguments:
+                to: ref('stg_rooms')
+                field: room_id

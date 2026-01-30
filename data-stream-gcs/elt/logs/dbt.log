@@ -1,0 +1,217 @@
+[0m16:53:41.715570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6e1e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d976250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9dd410>]}
+
+
+============================== 16:53:41.737522 | edd63099-5bd0-4e89-8ba6-0ed0ee230a96 ==============================
+[0m16:53:41.737522 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:53:41.737883 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'use_colors': 'True', 'quiet': 'False', 'profiles_dir': '/Users/admin/.dbt', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt init', 'log_format': 'default', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'debug': 'False', 'warn_error': 'None', 'target_path': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'partial_parse': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'empty': 'None', 'log_path': 'logs'}
+[0m16:54:10.729029 [debug] [MainThread]: Starter project path: /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m16:54:10.741813 [info ] [MainThread]: 
+Your new dbt project "airbnb_pipeline" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:54:10.742611 [info ] [MainThread]: Setting up your profile.
+[0m16:58:55.158452 [info ] [MainThread]: Profile airbnb_pipeline written to /Users/admin/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:58:55.723284 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 314.0593, "process_in_blocks": "0", "process_kernel_time": 2.239366, "process_mem_max_rss": "386744320", "process_out_blocks": "0", "process_user_time": 7.870107}
+[0m16:58:55.724917 [debug] [MainThread]: Command `dbt init` succeeded at 16:58:55.724794 after 314.06 seconds
+[0m16:58:55.725481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d963bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d78b190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1046cde90>]}
+[0m16:58:55.725876 [debug] [MainThread]: Flushing usage events
+[0m16:58:56.689240 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:59:03.973943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dae8bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db78b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db79350>]}
+
+
+============================== 16:59:03.978370 | b02e0b38-6d94-421e-a356-01e7f748a281 ==============================
+[0m16:59:03.978370 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:59:03.978729 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'use_colors': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'no_print': 'None', 'quiet': 'False', 'log_path': 'logs', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'profiles_dir': '/Users/admin/.dbt', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'log_format': 'default', 'static_parser': 'True', 'empty': 'None', 'version_check': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'indirect_selection': 'eager'}
+[0m16:59:03.999266 [info ] [MainThread]: dbt version: 1.11.2
+[0m16:59:03.999627 [info ] [MainThread]: python version: 3.11.14
+[0m16:59:03.999821 [info ] [MainThread]: python path: /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/.venv/bin/python3
+[0m16:59:03.999988 [info ] [MainThread]: os info: macOS-26.0.1-arm64-arm-64bit
+[0m16:59:07.035777 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m16:59:07.036083 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m16:59:07.036249 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml
+[0m16:59:07.036463 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m16:59:07.039067 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 3.1045787, "process_in_blocks": "0", "process_kernel_time": 0.935007, "process_mem_max_rss": "380092416", "process_out_blocks": "0", "process_user_time": 2.53144}
+[0m16:59:07.039380 [debug] [MainThread]: Command `dbt debug` failed at 16:59:07.039332 after 3.10 seconds
+[0m16:59:07.039577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db41690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db42990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d796750>]}
+[0m16:59:07.039784 [debug] [MainThread]: Flushing usage events
+[0m16:59:08.013275 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:05:10.734108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b93cf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b931410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9a3f90>]}
+
+
+============================== 17:05:10.736807 | 12394212-2af9-4e0e-843f-b332b04e6e29 ==============================
+[0m17:05:10.736807 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:05:10.737151 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'target_path': 'None', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'write_json': 'True', 'profiles_dir': '/Users/admin/.dbt', 'warn_error': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'version_check': 'True', 'empty': 'None', 'fail_fast': 'False', 'quiet': 'False', 'invocation_command': 'dbt debug', 'log_path': 'logs', 'printer_width': '80', 'debug': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_cache_events': 'False'}
+[0m17:05:10.747136 [info ] [MainThread]: dbt version: 1.11.2
+[0m17:05:10.747422 [info ] [MainThread]: python version: 3.11.14
+[0m17:05:10.747608 [info ] [MainThread]: python path: /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/.venv/bin/python3
+[0m17:05:10.747771 [info ] [MainThread]: os info: macOS-26.0.1-arm64-arm-64bit
+[0m17:05:14.100124 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m17:05:14.100422 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m17:05:14.100587 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml
+[0m17:05:14.100797 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:05:14.104350 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 3.4099503, "process_in_blocks": "0", "process_kernel_time": 1.002994, "process_mem_max_rss": "368738304", "process_out_blocks": "0", "process_user_time": 2.521127}
+[0m17:05:14.104670 [debug] [MainThread]: Command `dbt debug` failed at 17:05:14.104617 after 3.41 seconds
+[0m17:05:14.104865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b93eb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077d0f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107829b90>]}
+[0m17:05:14.105064 [debug] [MainThread]: Flushing usage events
+[0m17:05:15.223148 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:11:28.146140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c303d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bf12d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c8d950>]}
+
+
+============================== 17:11:28.149228 | def5f7d3-9bdc-4a17-8e88-204561c46cf4 ==============================
+[0m17:11:28.149228 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:11:28.149606 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'warn_error': 'None', 'log_path': 'logs', 'profiles_dir': '/Users/admin/.dbt', 'introspect': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'partial_parse': 'True', 'empty': 'None', 'cache_selected_only': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'write_json': 'True', 'target_path': 'None', 'log_format': 'default', 'quiet': 'False', 'fail_fast': 'False'}
+[0m17:11:28.159706 [info ] [MainThread]: dbt version: 1.11.2
+[0m17:11:28.159978 [info ] [MainThread]: python version: 3.11.14
+[0m17:11:28.160166 [info ] [MainThread]: python path: /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/.venv/bin/python3
+[0m17:11:28.160331 [info ] [MainThread]: os info: macOS-26.0.1-arm64-arm-64bit
+[0m17:11:31.548202 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m17:11:31.548506 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m17:11:31.548681 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml
+[0m17:11:31.548892 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:11:31.553068 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 3.4492857, "process_in_blocks": "0", "process_kernel_time": 1.040532, "process_mem_max_rss": "382959616", "process_out_blocks": "0", "process_user_time": 2.639258}
+[0m17:11:31.553542 [debug] [MainThread]: Command `dbt debug` failed at 17:11:31.553482 after 3.45 seconds
+[0m17:11:31.553842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c8d710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c8d750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b81f50>]}
+[0m17:11:31.554323 [debug] [MainThread]: Flushing usage events
+[0m17:11:32.776966 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:50:47.034893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd25490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcc1410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd5db10>]}
+
+
+============================== 09:50:47.037985 | 984ed4c4-641a-410d-a63f-f8c534625037 ==============================
+[0m09:50:47.037985 [info ] [MainThread]: Running with dbt=1.11.2
+[0m09:50:47.038360 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'write_json': 'True', 'introspect': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/admin/.dbt', 'quiet': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'partial_parse': 'True', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'target_path': 'None', 'log_path': 'logs', 'printer_width': '80', 'debug': 'False', 'invocation_command': 'dbt debug', 'static_parser': 'True'}
+[0m09:50:47.049204 [info ] [MainThread]: dbt version: 1.11.2
+[0m09:50:47.049485 [info ] [MainThread]: python version: 3.11.14
+[0m09:50:47.049673 [info ] [MainThread]: python path: /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/.venv/bin/python3
+[0m09:50:47.049834 [info ] [MainThread]: os info: macOS-26.0.1-arm64-arm-64bit
+[0m09:50:51.326406 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m09:50:51.326766 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m09:50:51.326937 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml
+[0m09:50:51.327100 [info ] [MainThread]: adapter type: bigquery
+[0m09:50:51.327243 [info ] [MainThread]: adapter version: 1.11.0
+[0m09:50:51.327397 [info ] [MainThread]: Configuration:
+[0m09:50:51.327537 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:50:51.327673 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m09:50:51.327808 [info ] [MainThread]: Required dependencies:
+[0m09:50:51.328014 [debug] [MainThread]: Executing "git --help"
+[0m09:50:51.360375 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:50:51.361065 [debug] [MainThread]: STDERR: "b''"
+[0m09:50:51.361275 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:50:51.361465 [info ] [MainThread]: Connection:
+[0m09:50:51.361717 [info ] [MainThread]:   method: oauth
+[0m09:50:51.361884 [info ] [MainThread]:   database: airbnb-485004
+[0m09:50:51.362026 [info ] [MainThread]:   execution_project: airbnb-485004
+[0m09:50:51.362164 [info ] [MainThread]:   schema: staging_data
+[0m09:50:51.362301 [info ] [MainThread]:   location: asia-southeast1
+[0m09:50:51.362439 [info ] [MainThread]:   priority: None
+[0m09:50:51.362571 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m09:50:51.362711 [info ] [MainThread]:   impersonate_service_account: None
+[0m09:50:51.362843 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m09:50:51.362979 [info ] [MainThread]:   job_retries: 1
+[0m09:50:51.363112 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m09:50:51.363245 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m09:50:51.363382 [info ] [MainThread]:   timeout_seconds: 300
+[0m09:50:51.363517 [info ] [MainThread]:   client_id: None
+[0m09:50:51.363730 [info ] [MainThread]:   token_uri: None
+[0m09:50:51.363940 [info ] [MainThread]:   compute_region: None
+[0m09:50:51.364132 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m09:50:51.364284 [info ] [MainThread]:   gcs_bucket: None
+[0m09:50:51.364434 [info ] [MainThread]:   dataproc_batch: None
+[0m09:50:51.364823 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m09:50:51.542367 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m09:50:51.542897 [debug] [MainThread]: On debug: select 1 as id
+[0m09:50:51.543111 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:50:53.933872 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=airbnb-485004&j=bq:asia-southeast1:109d03ba-7131-456e-b619-871ec8576481&page=queryresults
+[0m09:50:54.184999 [debug] [MainThread]: SQL status: OK in 0.249 seconds
+[0m09:50:54.701609 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:50:54.702946 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:50:54.703609 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml> not found
+
+[0m09:50:54.719319 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 7.729283, "process_in_blocks": "0", "process_kernel_time": 1.393009, "process_mem_max_rss": "366444544", "process_out_blocks": "0", "process_user_time": 2.903139}
+[0m09:50:54.721308 [debug] [MainThread]: Command `dbt debug` failed at 09:50:54.721102 after 7.73 seconds
+[0m09:50:54.721901 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:50:54.722433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f181d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcc0b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d97a750>]}
+[0m09:50:54.723008 [debug] [MainThread]: Flushing usage events
+[0m09:50:56.170110 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:21:14.665642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095e9ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095e9410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109621ad0>]}
+
+
+============================== 11:21:14.668686 | e6e1b9bc-7648-40fb-9929-83af0948b3e9 ==============================
+[0m11:21:14.668686 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:21:14.669036 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'use_colors': 'True', 'log_path': 'logs', 'use_experimental_parser': 'False', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'invocation_command': 'dbt debug', 'warn_error': 'None', 'cache_selected_only': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'quiet': 'False', 'profiles_dir': '/Users/admin/.dbt', 'fail_fast': 'False', 'introspect': 'True', 'empty': 'None', 'partial_parse': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'target_path': 'None', 'no_print': 'None'}
+[0m11:21:14.682712 [info ] [MainThread]: dbt version: 1.11.2
+[0m11:21:14.683022 [info ] [MainThread]: python version: 3.11.14
+[0m11:21:14.683216 [info ] [MainThread]: python path: /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/.venv/bin/python3
+[0m11:21:14.683387 [info ] [MainThread]: os info: macOS-26.0.1-arm64-arm-64bit
+[0m11:21:18.037415 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m11:21:18.037739 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m11:21:18.037907 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml
+[0m11:21:18.038065 [info ] [MainThread]: adapter type: bigquery
+[0m11:21:18.038206 [info ] [MainThread]: adapter version: 1.11.0
+[0m11:21:18.038355 [info ] [MainThread]: Configuration:
+[0m11:21:18.038491 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:21:18.038625 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:21:18.038760 [info ] [MainThread]: Required dependencies:
+[0m11:21:18.038950 [debug] [MainThread]: Executing "git --help"
+[0m11:21:18.057961 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:21:18.058728 [debug] [MainThread]: STDERR: "b''"
+[0m11:21:18.058942 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:21:18.059130 [info ] [MainThread]: Connection:
+[0m11:21:18.059352 [info ] [MainThread]:   method: oauth
+[0m11:21:18.059497 [info ] [MainThread]:   database: airbnb-485004
+[0m11:21:18.059635 [info ] [MainThread]:   execution_project: airbnb-485004
+[0m11:21:18.059770 [info ] [MainThread]:   schema: staging_data
+[0m11:21:18.059905 [info ] [MainThread]:   location: asia-southeast1
+[0m11:21:18.060039 [info ] [MainThread]:   priority: None
+[0m11:21:18.060173 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m11:21:18.060312 [info ] [MainThread]:   impersonate_service_account: None
+[0m11:21:18.060449 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m11:21:18.060583 [info ] [MainThread]:   job_retries: 1
+[0m11:21:18.060713 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m11:21:18.060846 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m11:21:18.060978 [info ] [MainThread]:   timeout_seconds: 300
+[0m11:21:18.061109 [info ] [MainThread]:   client_id: None
+[0m11:21:18.061241 [info ] [MainThread]:   token_uri: None
+[0m11:21:18.061368 [info ] [MainThread]:   compute_region: None
+[0m11:21:18.061498 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m11:21:18.061629 [info ] [MainThread]:   gcs_bucket: None
+[0m11:21:18.061757 [info ] [MainThread]:   dataproc_batch: None
+[0m11:21:18.062101 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m11:21:18.215080 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m11:21:18.215443 [debug] [MainThread]: On debug: select 1 as id
+[0m11:21:18.215625 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:21:19.744170 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=airbnb-485004&j=bq:asia-southeast1:109b8d5e-0cb8-491d-94af-5cb38132b2c8&page=queryresults
+[0m11:21:19.973156 [debug] [MainThread]: SQL status: OK in 0.227 seconds
+[0m11:21:20.270052 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:21:20.270962 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:21:20.271418 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/admin/Documents/Workspace/AirBnB-DE/data-stream-gcs/elt/dbt_project.yml> not found
+
+[0m11:21:20.281092 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 5.6603456, "process_in_blocks": "0", "process_kernel_time": 1.160345, "process_mem_max_rss": "381075456", "process_out_blocks": "0", "process_user_time": 2.756518}
+[0m11:21:20.282166 [debug] [MainThread]: Command `dbt debug` failed at 11:21:20.281975 after 5.66 seconds
+[0m11:21:20.282780 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:21:20.283405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095f4310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109584a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053ee0d0>]}
+[0m11:21:20.284092 [debug] [MainThread]: Flushing usage events
+[0m11:21:21.526889 [debug] [MainThread]: An error was encountered while trying to flush usage events

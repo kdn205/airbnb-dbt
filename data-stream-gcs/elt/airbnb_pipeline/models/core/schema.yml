@@ -1,0 +1,174 @@
+version: 2
+
+sources:
+  - name: core
+    description: "Analytics data for Business on"
+    database: airbnb-485004
+    schema: analytis_airbnb
+    tables:
+
+    - name: dim_host
+      description: Dimension table containing host information
+      columns:
+        - name: host_id
+          description: Unique identifier for each host (Primary Key)
+          data_tests:
+            - unique
+            - not_null
+        - name: host_name
+          description: Name of the host
+        - name: host_identity_verified
+          description: Boolean flag indicating if host identity is verified
+        - name: calculated_host_listings_count
+          description: Total number of listings owned by this host
+        - name: _loaded_at
+          description: Timestamp when the record was loaded into the warehouse
+
+    - name: dim_room
+      description: Dimension table containing room/listing details
+      columns:
+        - name: room_id
+          description: Unique identifier for each room (Primary Key)
+          data_tests:
+            - unique
+            - not_null
+        - name: room_name
+          description: Name or title of the listing
+        - name: room_type
+          description: Type of accommodation (Entire home/apt, Private room, Shared room)
+        - name: construction_year
+          description: Year when the property was constructed
+        - name: minimum_nights
+          description: Minimum number of nights required for booking
+        - name: cancellation_policy
+          description: Cancellation policy (Flexible, Moderate, Strict, etc.)
+        - name: instant_bookable
+          description: Boolean flag indicating if the room can be instantly booked
+        - name: _loaded_at
+          description: Timestamp when the record was loaded into the warehouse
+
+    - name: dim_location
+      description: Dimension table containing location and geographic information
+      columns:
+        - name: location_id
+          description: Unique identifier for each location (Primary Key)
+          data_tests:
+            - unique
+            - not_null
+        - name: neighbourhood_group
+          description: Broader neighborhood grouping or district
+        - name: neighbourhood
+          description: Specific neighborhood name
+        - name: lat
+          description: Latitude coordinate
+          data_tests:
+            - not_null
+        - name: long
+          description: Longitude coordinate
+          data_tests:
+            - not_null
+        - name: country
+          description: Country name
+        - name: country_code
+          description: ISO 3166-1 alpha-2 country code
+        - name: _loaded_at
+          description: Timestamp when the record was loaded into the warehouse
+
+    - name: dim_time
+      description: Date dimension table for time-based analysis
+      columns:
+        - name: date_id
+          description: Date identifier in YYYYMMDD format (Primary Key)
+          data_tests:
+            - unique
+            - not_null
+        - name: date
+          description: Actual date value
+          data_tests:
+            - not_null
+        - name: year
+          description: Year (YYYY)
+        - name: quarter
+          description: Quarter (1-4)
+        - name: month
+          description: Month (1-12)
+        - name: week_of_year
+          description: Week number within the year
+        - name: day
+          description: Day of the month (1-31)
+        - name: day_of_week
+          description: Day of the week (1=Sunday, 7=Saturday)
+        - name: day_of_year
+          description: Day number within the year (1-366)
+        - name: month_name
+          description: Full month name (January, February, etc.)
+        - name: month_name_short
+          description: Abbreviated month name (Jan, Feb, etc.)
+        - name: day_name
+          description: Full day name (Monday, Tuesday, etc.)
+        - name: day_name_short
+          description: Abbreviated day name (Mon, Tue, etc.)
+        - name: is_weekend
+          description: Boolean flag indicating if the day is a weekend
+        - name: season
+          description: Season name (Winter, Spring, Summer, Fall)
+        - name: is_first_day_of_month
+          description: Boolean flag for first day of the month
+        - name: is_last_day_of_month
+          description: Boolean flag for last day of the month
+
+    - name: fact_room_performance
+      description: Central fact table containing room performance metrics and measures
+      columns:
+        - name: fact_id
+          description: Unique identifier for each fact record (Primary Key)
+          data_tests:
+            - unique
+            - not_null
+        - name: room_id
+          description: Foreign key to dim_room
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('dim_room')
+                field: room_id
+        - name: host_id
+          description: Foreign key to dim_host
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('dim_host')
+                field: host_id
+        - name: location_id
+          description: Foreign key to dim_location
+          data_tests:
+            - relationships:
+                to: ref('dim_location')
+                field: location_id
+        - name: date_id
+          description: Foreign key to dim_time
+          data_tests:
+            - not_null
+            - relationships:
+                to: ref('dim_time')
+                field: date_id
+        - name: price
+          description: Listed price per night (measure)
+          data_tests:
+            - not_null
+        - name: service_fee
+          description: Service fee charged (measure)
+        - name: availability_365
+          description: Number of days available in the next 365 days (measure)
+        - name: occupancy_days
+          description: Estimated number of days occupied (365 - availability_365) (measure)
+        - name: estimated_revenue
+          description: Estimated annual revenue (price * occupancy_days) (measure)
+        - name: number_of_reviews
+          description: Total number of reviews received (measure)
+        - name: reviews_per_month
+          description: Average number of reviews per month (measure)
+        - name: review_rate_number
+          description: Average review rating score (measure)
+        - name: _loaded_at
+          description: Timestamp when the record was loaded into the warehouse

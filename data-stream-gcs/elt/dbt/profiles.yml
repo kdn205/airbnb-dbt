@@ -1,0 +1,21 @@
+airbnb_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: airbnb-485004
+      dataset: staging_data
+      location: asia-southeast1
+      threads: 4
+      timeout_seconds: 300
+     
+    prod:
+      type: bigquery
+      method: oauth
+      project: airbnb-485004
+      dataset: staging_data
+      location: asia-southeast1
+      threads: 8
+      timeout_seconds: 600
+      priority: interactive
