@@ -17,5 +17,5 @@ TABLES = [
     "rooms",
     "locations",
     "pricing",
-    "review_stats"
+    # "review_stats"
 ]
